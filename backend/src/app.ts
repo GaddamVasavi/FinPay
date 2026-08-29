@@ -14,6 +14,10 @@ import walletsRoutes from './modules/wallets/wallets.routes';
 import bankAccountsRoutes from './modules/bank-accounts/bank-accounts.routes';
 import kycRoutes from './modules/kyc/kyc.routes';
 import beneficiariesRoutes from './modules/beneficiaries/beneficiaries.routes';
+import transfersRoutes from './modules/transfers/transfers.routes';
+import paymentsRoutes from './modules/payments/payments.routes';
+import paymentRequestsRoutes from './modules/payment-requests/payment-requests.routes';
+import scheduledPaymentsRoutes from './modules/scheduled-payments/scheduled-payments.routes';
 import { ApiResponse } from './utils/response';
 
 export const createApp = (): Express => {
@@ -62,6 +66,10 @@ export const createApp = (): Express => {
   app.use('/api/bank-accounts', bankAccountsRoutes);
   app.use('/api/kyc', kycRoutes);
   app.use('/api/beneficiaries', beneficiariesRoutes);
+  app.use('/api/transfers', transfersRoutes);
+  app.use('/api/payments', paymentsRoutes);
+  app.use('/api/payment-requests', paymentRequestsRoutes);
+  app.use('/api/scheduled-payments', scheduledPaymentsRoutes);
 
   // 404 Route Handler
   app.use('*', (req: Request, res: Response) => {
