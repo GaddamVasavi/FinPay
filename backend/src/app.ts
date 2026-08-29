@@ -18,6 +18,8 @@ import transfersRoutes from './modules/transfers/transfers.routes';
 import paymentsRoutes from './modules/payments/payments.routes';
 import paymentRequestsRoutes from './modules/payment-requests/payment-requests.routes';
 import scheduledPaymentsRoutes from './modules/scheduled-payments/scheduled-payments.routes';
+import cardsRoutes from './modules/cards/cards.routes';
+import loansRoutes from './modules/loans/loans.routes';
 import { ApiResponse } from './utils/response';
 
 export const createApp = (): Express => {
@@ -70,6 +72,8 @@ export const createApp = (): Express => {
   app.use('/api/payments', paymentsRoutes);
   app.use('/api/payment-requests', paymentRequestsRoutes);
   app.use('/api/scheduled-payments', scheduledPaymentsRoutes);
+  app.use('/api/cards', cardsRoutes);
+  app.use('/api/loans', loansRoutes);
 
   // 404 Route Handler
   app.use('*', (req: Request, res: Response) => {
