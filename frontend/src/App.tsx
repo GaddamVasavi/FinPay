@@ -22,6 +22,11 @@ import { VerifyEmailPage } from './pages/auth/VerifyEmailPage';
 
 // Dashboard Pages
 import { DashboardPage } from './pages/customer/DashboardPage';
+import { WalletPage } from './pages/customer/WalletPage';
+import { BankAccountsPage } from './pages/customer/BankAccountsPage';
+import { TransactionsPage } from './pages/customer/TransactionsPage';
+import { KYCPage } from './pages/customer/KYCPage';
+import { BeneficiariesPage } from './pages/customer/BeneficiariesPage';
 import { AdminDashboardPage } from './pages/admin/AdminDashboardPage';
 import { SupportDashboardPage } from './pages/support/SupportDashboardPage';
 
@@ -53,14 +58,15 @@ export const App: React.FC = () => {
         }
       >
         <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="/wallet" element={<DashboardPage />} />
+        <Route path="/wallet" element={<WalletPage />} />
+        <Route path="/bank-accounts" element={<BankAccountsPage />} />
+        <Route path="/transactions" element={<TransactionsPage />} />
+        <Route path="/kyc" element={<KYCPage />} />
+        <Route path="/beneficiaries" element={<BeneficiariesPage />} />
         <Route path="/transfers" element={<DashboardPage />} />
-        <Route path="/bank-accounts" element={<DashboardPage />} />
         <Route path="/cards" element={<DashboardPage />} />
         <Route path="/budgeting" element={<DashboardPage />} />
         <Route path="/savings" element={<DashboardPage />} />
-        <Route path="/transactions" element={<DashboardPage />} />
-        <Route path="/kyc" element={<DashboardPage />} />
         <Route path="/support" element={<DashboardPage />} />
         <Route path="/settings" element={<DashboardPage />} />
       </Route>
