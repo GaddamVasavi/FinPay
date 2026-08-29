@@ -10,6 +10,10 @@ import { generalLimiter } from './middleware/rateLimiter.middleware';
 import { swaggerDocument } from './docs/swagger';
 import authRoutes from './modules/auth/auth.routes';
 import usersRoutes from './modules/users/users.routes';
+import walletsRoutes from './modules/wallets/wallets.routes';
+import bankAccountsRoutes from './modules/bank-accounts/bank-accounts.routes';
+import kycRoutes from './modules/kyc/kyc.routes';
+import beneficiariesRoutes from './modules/beneficiaries/beneficiaries.routes';
 import { ApiResponse } from './utils/response';
 
 export const createApp = (): Express => {
@@ -54,6 +58,10 @@ export const createApp = (): Express => {
   // Base API Routes
   app.use('/api/auth', authRoutes);
   app.use('/api/users', usersRoutes);
+  app.use('/api/wallets', walletsRoutes);
+  app.use('/api/bank-accounts', bankAccountsRoutes);
+  app.use('/api/kyc', kycRoutes);
+  app.use('/api/beneficiaries', beneficiariesRoutes);
 
   // 404 Route Handler
   app.use('*', (req: Request, res: Response) => {
