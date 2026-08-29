@@ -23,6 +23,9 @@ import loansRoutes from './modules/loans/loans.routes';
 import budgetingRoutes from './modules/budgeting/budgeting.routes';
 import savingsRoutes from './modules/savings/savings.routes';
 import analyticsRoutes from './modules/analytics/analytics.routes';
+import adminRoutes from './modules/admin/admin.routes';
+import disputesRoutes from './modules/disputes/disputes.routes';
+import supportRoutes from './modules/support/support.routes';
 import { ApiResponse } from './utils/response';
 
 export const createApp = (): Express => {
@@ -80,6 +83,9 @@ export const createApp = (): Express => {
   app.use('/api/budgeting', budgetingRoutes);
   app.use('/api/savings', savingsRoutes);
   app.use('/api/analytics', analyticsRoutes);
+  app.use('/api/admin', adminRoutes);
+  app.use('/api/disputes', disputesRoutes);
+  app.use('/api/support', supportRoutes);
 
   // 404 Route Handler
   app.use('*', (req: Request, res: Response) => {
