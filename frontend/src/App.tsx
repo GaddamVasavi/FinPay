@@ -30,6 +30,9 @@ import { BeneficiariesPage } from './pages/customer/BeneficiariesPage';
 import { TransfersPage } from './pages/customer/TransfersPage';
 import { CardsPage } from './pages/customer/CardsPage';
 import { LoansPage } from './pages/customer/LoansPage';
+import { BudgetingPage } from './pages/customer/BudgetingPage';
+import { SavingsPage } from './pages/customer/SavingsPage';
+import { AnalyticsPage } from './pages/customer/AnalyticsPage';
 import { AdminDashboardPage } from './pages/admin/AdminDashboardPage';
 import { SupportDashboardPage } from './pages/support/SupportDashboardPage';
 
@@ -69,8 +72,9 @@ export const App: React.FC = () => {
         <Route path="/transfers" element={<TransfersPage />} />
         <Route path="/cards" element={<CardsPage />} />
         <Route path="/loans" element={<LoansPage />} />
-        <Route path="/budgeting" element={<DashboardPage />} />
-        <Route path="/savings" element={<DashboardPage />} />
+        <Route path="/budgeting" element={<BudgetingPage />} />
+        <Route path="/savings" element={<SavingsPage />} />
+        <Route path="/analytics" element={<AnalyticsPage />} />
         <Route path="/support" element={<DashboardPage />} />
         <Route path="/settings" element={<DashboardPage />} />
       </Route>
